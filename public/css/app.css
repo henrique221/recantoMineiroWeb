@@ -1,0 +1,106 @@
+.bg_video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 80%;
+    width: auto;
+    z-index: -1000;
+}
+a {
+    text-decoration: none; !important;
+    color: #020900;
+    font-family: 'News Cycle', sans-serif;
+}
+
+.links a{
+    font-size: 50px;
+}
+
+h1{
+    text-shadow: 1px 1px #120c15;
+}
+
+@media only screen and (max-width: 600px){
+    h1{
+        font-size: 80px;
+        color:white;
+        font-family: 'Parisienne',
+        cursive;, sans-serif; opacity: 1
+    }
+}
+
+@media only screen and (min-width: 601px){
+    h1{
+        font-size: 190px;
+        color:white;
+        font-family: 'Parisienne',
+        cursive;, sans-serif; opacity: 1
+    }
+    .tituloRecanto {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+    }
+    .groupVideoTitulo {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        height: 711px;
+    }
+}
+
+
+@media only screen and (max-width: 1280px) {
+    .tituloRecanto {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+    }
+    .groupVideoTitulo {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        height: 711px;
+    }
+}
+@media only screen and (min-width: 1281px) {
+    .groupVideoTitulo {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        margin-top: 150px;
+        padding-top: 350px;
+        padding-bottom: 350px;
+    }
+    .tituloRecanto {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.contents{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.anchor{
+    padding-top: 250px;
+    font-size: 60px;
+}
+
+svg {
+    display: block;
+    width: 100%;
+    height: 500px;
+    background: #fdeeff;
+}

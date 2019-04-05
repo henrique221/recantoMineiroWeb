@@ -1,34 +1,80 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello IndexController!{% endblock %}
+{% block title %}Recanto Mineiro{% endblock %}
 
 {% block body %}
+    <link href="{{ asset("css/app.css") }}" rel="stylesheet">
+    <div class="groupVideoTitulo">
+        <video autoplay muted class="bg_video" loop id="myVideo">
+            <source src="{{ asset('video/shortNature.mp4') }}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
 
-<video autoplay muted class="bg_video" loop id="myVideo">
-  <source src="{{ asset('video/shortNature.mp4')}}" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
+        <div class="tituloRecanto">
+            <div class="contents">
+                <h1 class="text-center">
+                    Recanto Mineiro</h1>
+                <h4 class="text-center"
+                    style="color:white; font-family: 'Karla', sans-serif; font-size: 20px; opacity: 1">Restaurante e
+                    Hotel </h4>
+                <a href="#menu">
+                    <i style="color: white" class="anchor fas fa-chevron-down"></i>
+                </a>
+            </div>
 
-<div style="background-color:#1d312cf2; padding-bottom: 20px; padding-top: 15px">
-  <div class="display-flex content">
-      <h1 class="text-center" style="color:white; font-family: 'Karla', sans-serif; font-size: 50px; opacity: 1">Recanto Mineiro</h1>
-      <h4 class="text-center" style="color:white; font-family: 'Karla', sans-serif; font-size: 20px; opacity: 1">Restaurante e Hotel</h4>
-  </div>
-</div>
+        </div>
+    </div>
 
-<style>
-.bg_video{
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	z-index: -1000;
-	background: url(images/torre.jpg) no-repeat;
-	background-size: cover;
-}
-</style>
+    <div id="menu">
+        <svg style="height: 250px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+            <polygon fill="#414c42" points="150 0 120 60 0 0"/>
+            <polygon fill="white" points="100 0 150 50 2 10"/>
+        </svg>
 
+        <div class="links d-flex flex-column ml-4">
+            <a style="text-decoration: none; !important;" href="#formReserva">Faça sua reserva</a>
+            <a style="text-decoration: none; !important;" href="#formReserva">Veja os proximos eventos</a>
+            <a style="text-decoration: none; !important;" href="#formReserva">Galeria</a>
+        </div>
+
+        <svg style="height: 500px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+            <polygon fill="white" points="100 0, 0 100, 0 0"/>
+            <polygon fill="#414c42" points="105 0 150 500 5 10"/>
+        </svg>
+    </div>
+    <svg style="height: 500px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+        <polygon fill="#414c42" points="100 0 5 1900 0 0"/>
+        <polygon fill="white" points="180 0 100 100 2 10"/>
+    </svg>
+
+    <img id="formReserva" style="padding-top: 200px" class="container d-flex justify-content-center" src="{{ asset('Images/embreveazul.png') }}">
+
+{% endblock %}
+{% block javascripts %}
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
 {% endblock %}
