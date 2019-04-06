@@ -24,30 +24,31 @@
 
         </div>
     </div>
+            <svg class="overvideo" viewBox="127 330 673 479">
+                <path d="M 0 280 Q 142 95 328 178 Q 591 344 800 204 L 800 379 L 0 383 L 2 278 " style="stroke: none; fill:#414c42;"></path>
+            </svg>
+            <svg viewBox="0 0 500 150" preserveAspectRatio="xMinYMin meet">
+                <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#414c42;"></path>
+                <div id="menu" class="links d-flex flex-column ml-4">
+                    <a style="text-decoration: none; !important;" href="#formReserva">Faça sua reserva</a>
+                    <a style="text-decoration: none; !important;" href="#formReserva">Veja os proximos eventos</a>
+                    <a style="text-decoration: none; !important;" href="#formReserva">Galeria</a>
 
-    <div id="menu">
-        <svg style="height: 250px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
-            <polygon fill="#414c42" points="150 0 120 60 0 0"/>
-            <polygon fill="white" points="100 0 150 50 2 10"/>
-        </svg>
+                </div>
+            </svg>
+    <button class="ui icon button">
+        <i class="cloud icon"></i>
+    </button>
 
-        <div class="links d-flex flex-column ml-4">
-            <a style="text-decoration: none; !important;" href="#formReserva">Faça sua reserva</a>
-            <a style="text-decoration: none; !important;" href="#formReserva">Veja os proximos eventos</a>
-            <a style="text-decoration: none; !important;" href="#formReserva">Galeria</a>
-        </div>
 
-        <svg style="height: 500px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
-            <polygon fill="white" points="100 0, 0 100, 0 0"/>
-            <polygon fill="#414c42" points="105 0 150 500 5 10"/>
-        </svg>
-    </div>
-    <svg style="height: 500px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
-        <polygon fill="#414c42" points="100 0 5 1900 0 0"/>
-        <polygon fill="white" points="180 0 100 100 2 10"/>
-    </svg>
-
-    <img id="formReserva" style="padding-top: 200px" class="container d-flex justify-content-center" src="{{ asset('Images/embreveazul.png') }}">
+    <form style="z-index: 500; position: absolute">
+        <select>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
+    </form>
 
 {% endblock %}
 {% block javascripts %}
