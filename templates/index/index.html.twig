@@ -24,21 +24,64 @@
 
         </div>
     </div>
-            <svg class="overvideo" viewBox="127 330 673 479">
-                <path d="M 0 280 Q 142 95 328 178 Q 591 344 800 204 L 800 379 L 0 383 L 2 278 " style="stroke: none; fill:#414c42;"></path>
-            </svg>
-            <svg viewBox="0 0 500 150" preserveAspectRatio="xMinYMin meet">
-                <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#414c42;"></path>
-                <div id="menu" class="links d-flex flex-column ml-4">
-                    <a style="text-decoration: none; !important;" href="#formReserva">Faça sua reserva</a>
-                    <a style="text-decoration: none; !important;" href="#formReserva">Veja os proximos eventos</a>
-                    <a style="text-decoration: none; !important;" href="#formReserva">Galeria</a>
+    <svg class="overvideo" viewBox="127 330 673 479">
+        <path d="M 0 280 Q 142 95 328 178 Q 591 344 800 204 L 800 379 L 0 383 L 2 278 "
+              style="stroke: none; fill:#414c42;"></path>
+    </svg>
+    <svg viewBox="0 0 500 150" preserveAspectRatio="xMinYMin meet">
+        <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#414c42;"></path>
+        <div id="menu" class="links d-flex flex-column ml-4">
+            <a style="text-decoration: none; !important;" href="#formReserva">Faça sua reserva</a>
+            <a id="construcao" href="#menu" style="text-decoration: none; !important;">Veja os proximos eventos</a>
+            <a id="construcao" href="#menu" style="text-decoration: none; !important;">Galeria</a>
 
+        </div>
+    </svg>
+
+    <svg class="overform" viewBox="120 100 300 200">
+        <path d="M 0 280 Q 142 95 328 178 Q 591 344 800 204 L 800 379 L 0 383 L 2 278 "
+              style="stroke: none; fill:#414c42;"></path>
+    </svg>
+
+    <section class="formReservasContainer">
+
+        <h3 id="formReserva" class="reservaTitulo">Reservas</h3>
+        <form class="reserva">
+
+            <label>
+                <p class="label-txt">Seu nome completo</p>
+                <input type="text" class="input">
+                <div class="line-box">
+                    <div class="line"></div>
                 </div>
-            </svg>
+            </label>
+            <label>
+                <p class="label-txt">Data de chegada<p>
+                <input type="date" class="input">
+                <div class="line-box">
+                    <div class="line"></div>
+                </div>
+            </label>
+            <label>
+                <p class="label-txt">Data de saída<p>
+                    <input type="date" class="input">
+                <div class="line-box">
+                    <div class="line"></div>
+                </div>
+            </label>
+            <button>Enviar</button>
+
+        </form>
+    </section>
+
+    <svg class="overformBottom" viewBox="0 -50 500 150" preserveAspectRatio="xMinYMin meet">
+        <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#414c42;"></path>
+    </svg>
+
 
 {% endblock %}
 {% block javascripts %}
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
     <script>
         $(document).ready(function () {
             // Add smooth scrolling to all links
