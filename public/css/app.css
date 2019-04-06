@@ -211,7 +211,7 @@ button:hover {
 
 @media only screen and (max-width: 600px) {
     .formReservasContainer {
-        margin-top: 350px;
+        margin-top: 367px;
     }
 
     .formReservasContainer h3 {
@@ -262,17 +262,38 @@ button:hover {
         width: 200px;
     }
 }
-.overform{
-    position: absolute;
-    overflow: overlay;
-    height: 800px;
-}
-.overformBottom{
-    position: absolute;
-    height: 800px;
-    z-index: -500;
+@media only screen and (min-width: 601px) {
+    .overform {
+        position: absolute;
+        overflow: overlay;
+        top: 1700px;
+    }
+
+    .overformBottom {
+        position: absolute;
+        z-index: -500;
+        top: 2560px;
+    }
+
+    .reservaTitulo {
+        overflow: hidden;
+    }
 }
 
-.reservaTitulo{
-    overflow: hidden;
+@media only screen and (max-width: 600px) {
+    .overform {
+        position: absolute;
+        overflow: overlay;
+        top: 1220px;
+    }
+
+    .overformBottom {
+        position: absolute;
+        z-index: -500;
+        top: 1508px;
+    }
+
+    .reservaTitulo {
+        overflow: hidden;
+    }
 }
